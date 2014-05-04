@@ -11,7 +11,7 @@ var updateStatement = "UPDATE Contacts SET username = ?, useremail = ? WHERE id=
  
 var deleteStatement = "DELETE FROM Contacts WHERE id=?";
  
-var dropStatement = "<span class='e84ypv' id='e84ypv_5'>DROP TABLE</span> Contacts";
+var dropStatement = "DROP TABLE Contacts";
  
  var db = openDatabase("AddressBook", "1.0", "Address Book", 200000);  // Open SQLite Database
  
@@ -66,7 +66,7 @@ function createTable()  // Function for Create Table in SQLite.
 {
  
     db.transaction(function (tx) { tx.executeSql(createStatement, [], showRecords, onError); });
- 
+ alert('db created');
 }
  
 function insertRecord() // Get value from Input and insert record . Function Call when Save/<span class='e84ypv' id='e84ypv_4'>Submit Button</span> Click..
