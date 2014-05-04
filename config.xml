@@ -6,10 +6,11 @@
         id        = "com.phonegap.CORS"
         version   = "1.0.0">
 
-    <name>CORS</name>
+    <name>Html5 SQlite</name>
 
     <description>
-        CORS
+        Html5 SQlite
+
     </description>
 
     <author href="" email="yashrawat1986@gmail.com">
