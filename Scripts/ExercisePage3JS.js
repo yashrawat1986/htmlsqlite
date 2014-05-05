@@ -76,8 +76,11 @@ function insertRecord() // Get value from Input and insert record . Function Cal
         var usernametemp = $('input:text[id=username]').val();
  
         var useremailtemp = $('input:text[id=useremail]').val();
+        for(int i=0;i<1000;i++)
+        {
         db.transaction(function (tx) { tx.executeSql(insertStatement, [usernametemp, useremailtemp], loadAndReset, onError); });
- 
+        }
+ alert("Record Inserted"); 
         //tx.executeSql(SQL Query Statement,[ Parameters ] , Sucess Result Handler Function, Error Result Handler Function );
  
 }
