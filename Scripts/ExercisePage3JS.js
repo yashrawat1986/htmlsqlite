@@ -72,11 +72,11 @@ function createTable()  // Function for Create Table in SQLite.
 function insertRecord() // Get value from Input and insert record . Function Call when Save/<span class='e84ypv' id='e84ypv_4'>Submit Button</span> Click..
  
 {
- 
+ alert("Insert started");
         var usernametemp = $('input:text[id=username]').val();
  
         var useremailtemp = $('input:text[id=useremail]').val();
-        for(int i=0;i<1000;i++)
+        for(var i=0;i<100;i++)
         {
         db.transaction(function (tx) { tx.executeSql(insertStatement, [usernametemp, useremailtemp], loadAndReset, onError); });
         }
@@ -155,7 +155,8 @@ function loadAndReset() //Function for Load and Reset...
  
     resetForm();
  
-    showRecords()
+    showRecords
+    alert("fetched");
  
 }
  
